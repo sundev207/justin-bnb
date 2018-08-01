@@ -1,10 +1,20 @@
 # just-bnb
 
-##### A clone of [Airbnb](https://www.airbnb.com/ "Airbnb")
+#### A clone of [Airbnb](https://www.airbnb.com/ "Airbnb")
 
 ###### Developed by Justin Padilla
 
-[LinkedIn](https://www.linkedin.com/in/bjjeong/)
-[Personal Website](http://www.elbrian.com/)
-[Instagram](https://www.instagram.com/)
-[Facebook](https://www.facebook.com/bjjeong1)
+[![alt text][4.1]][4]
+[![alt text][3.1]][3]
+[![alt text][1.1]][1]
+[![alt text][2.1]][2]
+
+
+
+
+
+
+
+
+
+
