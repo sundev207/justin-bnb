@@ -8,9 +8,7 @@ const App = ({ children }) => (
         <Modal />
         <NavContainer />
         <header>
-            <NavLink to="/" className="header-link">
-                <h1>Just-bnb</h1>
-            </NavLink>
+
         </header>
     </div>
 );
