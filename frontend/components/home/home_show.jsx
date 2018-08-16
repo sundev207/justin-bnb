@@ -1,6 +1,7 @@
  import React from 'react';
  import Map from './map';
  import {withRouter} from 'react-router';
+ import ReviewContainer from './review_container';
 
  class HomeShow extends React.Component {
     constructor(props) {
@@ -71,7 +72,64 @@
                             </div>
                         </div>
                         <div className="amenities-container">
+                            <div className="label-container">
+                                <div>
+                                    <span>Amenities</span>
+                                </div>
+                            </div>
+                            <div className="amenities">
+                                <ul>
+                                    <div className="list-container">
+                                        <div className="icon-container">
+                                            <i className="fas fa-wifi fa-xs"></i>
+                                        </div>
+                                        <li>Wifi</li>
+                                    </div>
+                                    <div className="list-container">
+                                        <div className="icon-container">
+                                            <i className="fas fa-utensils fa-xs"></i>
+                                        </div>
+                                        <li>Kitchen</li>
+                                    </div>
+                                    <div className="list-container">
+                                        <div className="icon-container">
+                                            <i className="fas fa-tshirt fa-xs"></i>
+                                        </div>
+                                        <li>Washer</li>
+                                    </div>
+                                </ul>
+                            </div>
+                            <div className="amenities">
+                                <ul>
+                                    <div className="list-container">
+                                        <div className="icon-container">
+                                            <i className="fas fa-car fa-xs"></i>
+                                        </div>
+                                        <li>Parking</li>
+                                    </div>
+                                    <div className="list-container">
+                                        <div className="icon-container">
+                                            <i className="fas fa-tv fa-xs"></i>
+                                        </div>
+                                        <li>TV</li>
+                                    </div>
+                                    <div className="list-container">
+                                        <div className="icon-container">
+                                            <i className="fas fa-thermometer-half fa-xs"></i>
+                                        </div>
+                                        <li>Heating</li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="reviews-container">
+                            <div className="review-count-container">
 
+                            </div>
+                            {/* <ReviewContainer homeId={this.props.homeId} /> */}
+                            <div>
+                                <button onClick={() => this.props.openModal(['review', this.props.homeId])}>CLICK ME</button>
+                            </div>
                         </div>
                         <div className="home-show-map">
                             <Map

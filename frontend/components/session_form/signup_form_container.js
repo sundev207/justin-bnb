@@ -4,14 +4,15 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 import { signup } from '../../actions/session_actions';
 import SignUpForm from './signup_form';
 
-const mapStateToProps = ({ errors }) => ({
+const mapStateToProps = ({ session, errors }) => ({
+    loggedIn: Boolean(session.id),
     formType: 'signup',
     errors: errors.session
 });
 
 const mapDispatchToProps = dispatch => ({
     processForm: user => dispatch(signup(user)),
-    otherForm: () => dispatch(openModal('login')),
+    otherForm: () => dispatch(openModal(['login'])),
     closeModal: () => dispatch(closeModal())
 });
 

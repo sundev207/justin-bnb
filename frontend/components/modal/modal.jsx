@@ -3,23 +3,23 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
+import ReviewContainer from '../home/review_container';
 
 function Modal({ modal }) {
     if (!modal) {
         return null;
     }
     let component;
-    switch (modal) {
+    switch (modal[0]) {
         case 'login':
             component = <LoginFormContainer />;
             break;
         case 'signup':
             component = <SignupFormContainer />;
             break;
-        case 'demo':
-            component = <LoginFormContainer 
-                demo={ {email: 'demo@demo.com', password: '123123'} }
-            />;
+        case 'review':
+            let prop = modal[1];
+            component = <ReviewContainer homeId={prop}/>;
             break;
         default:
             return null;

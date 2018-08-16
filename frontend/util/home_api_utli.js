@@ -1,4 +1,4 @@
-export const fetchHomes = (filters) => (
+export const fetchHomes = filters => (
     $.ajax({
         method: 'GET',
         url: 'api/homes',
@@ -10,5 +10,13 @@ export const fetchHome = id => (
     $.ajax({
         method: 'GET',
         url: `api/homes/${id}`,
+    })
+);
+
+export const createReview = review => (
+    $.ajax({
+        method: 'POST',
+        url: 'api/reviews',
+        data: {review}
     })
 );

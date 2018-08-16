@@ -76,10 +76,10 @@ class Nav extends React.Component {
                                 <li>
                                     <button>Help</button>
                                 </li>
-                                <li onClick={() => openModal('signup')}>
+                                <li onClick={() => openModal(['signup'])}>
                                     <button>Sign up</button>
                                 </li>
-                                <li onClick={() => openModal('login')}>
+                                <li onClick={() => openModal(['login'])}>
                                     <button>Log in</button>
                                 </li>
                                 <li onClick={() => login({ email: "demo@demo.com", password: "123123" })}>
