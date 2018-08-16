@@ -14,8 +14,6 @@ const mapDispatchToProps = dispatch => ({
     openModal: modal => dispatch(openModal(modal)),
     closeModal: () => dispatch(closeModal()),
     createReview: review => dispatch(createReview(review)),
-    // editReview:
-    // deleteReview:
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Review);

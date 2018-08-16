@@ -9,14 +9,18 @@ export const receiveHomes = homes => ({
     homes
 });
 
-export const receiveHome = ({ home }) => ({
+export const receiveHome = payload => ({
     type: RECEIVE_HOME,
-    home
+    home: payload.home,
+    reviews: payload.reviews,
+    users: payload.users
+
 });
 
-export const receiveReview = review => ({
+export const receiveReview = payload => ({
     type: RECEIVE_REVIEW,
-    review
+    review: payload.review,
+    user: payload.user
 
 });
 

@@ -1,6 +1,6 @@
 import merge from 'lodash/merge';
 
-import { RECEIVE_HOMES, RECEIVE_HOME } from '../actions/home_actions';
+import { RECEIVE_HOMES, RECEIVE_HOME, RECEIVE_REVIEW } from '../actions/home_actions';
 
 const homesReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -13,15 +13,9 @@ const homesReducer = (state = {}, action) => {
                 [action.home.id]: action.home
             };
             return merge(newState, newHome);
-        // case RECEIVE_REVIEW:
-        //     const {
-        //         review,
-        //         average_rating
-        //     } = action;
-        //     const newState = merge({}, state);
-        //     newState[review.home_id].reviewIds.push(review.id);
-        //     newState[review.home_id].average_rating = average_rating;
-        //     return newState;
+        case RECEIVE_REVIEW:
+            newState[action.review.home_id].reviewIds.push(action.review.id);
+            return newState;
         default:
             return state;
     }

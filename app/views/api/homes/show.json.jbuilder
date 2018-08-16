@@ -10,7 +10,7 @@ end
     end
   end
 
-  json.authors do
+  json.users do
     json.set! review.user.id do
       json.extract! review.user, :id, :email, :first_name, :last_name
     end

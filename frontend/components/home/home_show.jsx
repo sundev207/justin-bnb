@@ -1,7 +1,7 @@
  import React from 'react';
  import Map from './map';
  import {withRouter} from 'react-router';
- import ReviewContainer from './review_container';
+import ReviewListContainer from './review_list_container';
 
  class HomeShow extends React.Component {
     constructor(props) {
@@ -129,6 +129,7 @@
                             <div className="review-button-container">
                                 <button onClick={() => this.props.openModal(['review', this.props.homeId])}>Leave a Review</button>
                             </div>
+                            <ReviewListContainer/>
                         </div>
                         <div className="home-show-map">
                             <Map
