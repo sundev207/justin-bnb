@@ -49,8 +49,8 @@ class Review extends React.Component {
 
     render() {
         return (
-            <section className="login-form-container">
-                <div className="login-form-content">
+            <section className="review-form-container">
+                <div className="review-form-content">
                     <div className="close-x">
                         <button className="x-button" onClick={this.props.closeModal}>
                             <svg viewBox="0 0 24 24" role="img" aria-label="Close" focusable="false">
@@ -62,25 +62,25 @@ class Review extends React.Component {
                     <section>
                         <div>
                             <div>
-                                <form onSubmit={this.handleSubmit} className="login-form-box">
+                                <form onSubmit={this.handleSubmit} className="review-form-box">
                                     <br /> {this.renderErrors()}
-                                    <div className="login-form">
+                                    <div className="review-form">
                                         <div className="input-container">
                                             <div className="input-container-2">
                                                 <div className="form-input">
-                                                    <input type="number" autoComplete="off" placeholder="Please select a number between 1-5" onChange={this.update("rating")} className="login-input" />
+                                                    <input required type="number" autoComplete="off" placeholder="Please select a number between 1-5" onChange={this.update("rating")} className="review-input" />
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="input-container">
                                             <div className="input-container-2">
                                                 <div className="form-input">
-                                                    <textarea placeholder="Leave a review" value={this.state.body} onChange={this.update("body")} className="login-input" />
+                                                    <textarea required rows="13" placeholder="Leave a review" value={this.state.body} onChange={this.update("body")} className="review-input" />
                                                 </div>
                                             </div>
                                         </div>
                                         <br />
-                                        <button type="submit">
+                                        <button type="submit" disabled={!(this.state.body !== "" && this.state.rating !== 0 && this.state.rating !== "")} >
                                             <span className="button-text">
                                                 Submit Review
                                             </span>

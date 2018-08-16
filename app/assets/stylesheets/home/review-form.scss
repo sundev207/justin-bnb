@@ -3,30 +3,29 @@ section {
     box-sizing: border-box;
 }
 
-.login-form-container {
+.review-form-container {
     display: flex;
     justify-content: center;
     width: 568px;
-    height: 783px;
+    height: 600px;
     outline: 1px solid black;
     background: white;
-
 }
 
-.login-form-container {
+.review-form-container {
     background-color: rgb(255, 255, 255) !important;
     box-sizing: border-box !important;
     padding: 32px !important;
     display: block;
 }
 
-.login-form-box {
+.review-form-box {
     padding: 20px;
     display: block;
     margin-top: 0em;
 }
 
-.login-form {
+.review-form {
     margin-bottom: 16px;
 }
 
@@ -34,19 +33,14 @@ section {
     display: block !important;
     width: 100% !important;
     box-sizing: border-box;
-    margin-bottom: 16px;
+    // margin-bottom: 16px;
 }
 
 .input-container-2 {
     font-size: 16px !important;
     line-height: 22px !important;
     letter-spacing: normal !important;
-    font-family: Circular,
-    -apple-system,
-    BlinkMacSystemFont,
-    Roboto,
-    "Helvetica Neue",
-    sans-serif !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
     color: rgb(72, 72, 72) !important;
     background-color: rgb(255, 255, 255) !important;
     margin-bottom: 8px !important;
@@ -60,29 +54,6 @@ section {
     border-radius: 2px !important;
 }
 
-.input-icon {
-    padding: 13px 13px 0 13px;
-    float: right !important;
-    font-size: 16px !important;
-    line-height: 22px !important;
-    letter-spacing: normal !important;
-    font-family: Circular,
-    -apple-system,
-    BlinkMacSystemFont,
-    Roboto,
-    "Helvetica Neue",
-    sans-serif !important;
-    color: rgb(72, 72, 72) !important;
-}
-
-.input-icon svg {
-    height: 1em;
-    width: 1em;
-    display: block;
-    fill: currentcolor;
-    transform: rotate(0deg);
-}
-
 .form-input {
     position: relative !important;
     overflow: hidden !important;
@@ -91,7 +62,7 @@ section {
 }
 
 .close-x {
-    margin-bottom: 24px !important;
+    margin-bottom: 12px !important;
     box-sizing: border-box;
     display: block;
 }
@@ -123,7 +94,7 @@ section {
     box-sizing: border-box;
 }
 
-.login-form button {
+.review-form button {
     cursor: pointer;
     padding-top: 12px !important;
     padding-bottom: 12px !important;
@@ -150,35 +121,27 @@ section {
 
     &:disabled {
         opacity: .4;
+        background: rgb(255, 90, 95) !important;
     }
 }
+
 
 .button-text {
     font-size: 16px !important;
     line-height: 22px !important;
     letter-spacing: normal !important;
-    font-family: Circular,
-    -apple-system,
-    BlinkMacSystemFont,
-    Roboto,
-    "Helvetica Neue",
-    sans-serif !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
     color: inherit !important;
     cursor: pointer !important;
     text-align: center;
     box-sizing: border-box;
 }
 
-.login-input {
+.review-input {
     font-size: 16px !important;
     line-height: 22px !important;
     letter-spacing: normal !important;
-    font-family: Circular,
-    -apple-system,
-    BlinkMacSystemFont,
-    Roboto,
-    "Helvetica Neue",
-    sans-serif !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
     color: rgb(72, 72, 72) !important;
     font-weight: normal !important;
     background-color: transparent !important;
@@ -198,17 +161,4 @@ section {
 .line {
     border-bottom: 1px solid rgb(235, 235, 235) !important;
     display: block;
-}
-
-.redirect {
-    text-align: center;
-}
-
-.login-form-container a {
-    cursor: pointer;
-    color: rgb(0, 132, 137) !important;
-    text-align: left !important;
-    font: inherit inherit inherit inherit inherit inherit inherit inherit inherit !important;
-    font-weight: 500;
-    text-decoration: none !important;
 }

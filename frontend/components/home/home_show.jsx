@@ -126,9 +126,8 @@
                             <div className="review-count-container">
 
                             </div>
-                            {/* <ReviewContainer homeId={this.props.homeId} /> */}
-                            <div>
-                                <button onClick={() => this.props.openModal(['review', this.props.homeId])}>CLICK ME</button>
+                            <div className="review-button-container">
+                                <button onClick={() => this.props.openModal(['review', this.props.homeId])}>Leave a Review</button>
                             </div>
                         </div>
                         <div className="home-show-map">

@@ -20,24 +20,19 @@
         justify-content: flex-end;
         flex-wrap: wrap;
         width: 55%;
-
         .home-show-details {
             display: block;
             width: 65%;
-
             .quick-info {
                 display: flex;
-
                 .name-city-left {
                     width: 85%;
                 }
-
                 .host-photo-container {
                     width: 15%;
                     display: flex;
                     justify-content: flex-end;
                     padding: 7px 5px 0 0;
-
                     .host-photo {
                         width: 70px;
                         height: 70px;
@@ -69,14 +64,13 @@
                 margin-bottom: 20px;
                 line-height: 21px;
                 border-bottom: 1px solid #EBEBEB;
-
-                .read-more, .contact-host {
+                .read-more,
+                .contact-host {
                     padding: 30px 0 0 0;
                     font-size: 16px;
                     line-height: 22px;
                     font-weight: 500;
                     color: #008489 !important;
-
                     i {
                         font-size: 12px;
                     }
@@ -90,53 +84,87 @@
             justify-content: center;
             border-bottom: 1px solid #EBEBEB;
             margin: 0 0 24px 0;
-
             .label-container {
                 width: 100%;
                 margin: 0 0 16px 0;
-
                 span {
                     font-size: 16px !important;
                     line-height: 22px !important;
                     font-weight: 800;
                 }
             }
-
             .amenities {
                 width: 50%;
-
                 .list-container {
                     width: 100%;
                     display: flex;
                     font-weight: 400;
                     color: #727272 !important;
                     padding: 0 0 25px 0;
-
                     .icon-container {
                         width: 6%;
                         display: flex;
                         justify-content: center;
                         padding: 0 5px 0 0;
                     }
-
                     li {
                         line-height: 12px;
                     }
                 }
             }
         }
-
         .reviews-container {
             width: 65%;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             border-bottom: 1px solid #EBEBEB;
-
             .review-count-container {
                 width: 100%;
             }
+            .review-button-container {
+                width: 85%;
+                padding: 0 0 25px 0;
 
+                button {
+                    cursor: pointer !important;
+                    display: inline-block !important;
+                    margin: 0px !important;
+                    position: relative !important;
+                    text-align: center !important;
+                    text-decoration: none !important;
+                    -webkit-transition-property: background, border-color, color !important;
+                    -moz-transition-property: background, border-color, color !important;
+                    transition-property: background, border-color, color !important;
+                    -webkit-transition-duration: 0.2s !important;
+                    transition-duration: 0.2s !important;
+                    -webkit-transition-timing-function: ease-out !important;
+                    transition-timing-function: ease-out !important;
+                    border-radius: 4px !important;
+                    width: 100% !important;
+                    font-size: 16px !important;
+                    line-height: 22px !important;
+                    letter-spacing: normal !important;
+                    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+                    text-transform: undefined !important;
+                    padding-top: 12px !important;
+                    padding-bottom: 12px !important;
+                    font-weight: 800 !important;
+                    border-width: 2px !important;
+                    border-style: solid !important;
+                    padding-left: 24px !important;
+                    padding-right: 24px !important;
+                    min-width: 77.66563145999496px !important;
+                    box-shadow: none !important;
+                    background: #FF5A5F !important;
+                    border-color: transparent !important;
+                    color: #ffffff !important;
+
+                    &:hover {
+                        background: rgb(238, 56, 62) !important;
+                    }
+                }
+            }
             .review-form-container {
                 width: 100%;
                 height: 40vh;
@@ -151,7 +179,6 @@
                 width: 100%;
                 height: 40vh;
             }
-
             div {
                 border: none;
             }
@@ -160,10 +187,8 @@
     .home-show-right {
         display: flex;
         flex-wrap: wrap;
-        width: 45%;
-        // margin: 0 0 0 80px;
+        width: 45%; // margin: 0 0 0 80px;
         // height: 200px;
-
         .reservation-container {
             display: flex;
             flex-direction: column;
@@ -172,7 +197,6 @@
             height: 47vh;
             border: 1px solid #EBEBEB;
             margin: 0 0 0 54px;
-
             .price-container {
                 height: 40px;
                 width: 85%;
@@ -183,27 +207,22 @@
                     justify-content: flex-start;
                     align-items: flex-end;
                     padding: 0 0 8px 0;
-
                     .value {
                         font-size: 24px;
                         font-weight: 800;
                     }
-
                     .word {
                         font-size: 12px;
                         font-weight: 500;
-                        padding: 0 0 1px 0;
-                        // vertical-align: bottom;
+                        padding: 0 0 1px 0; // vertical-align: bottom;
                     }
                 }
-
                 .stars {
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
                     font-size: 11px;
                     color: #008489 !important;
-
                     .review-count {
                         color: rgb(72, 72, 72);
                         font-weight: 500;
@@ -211,20 +230,17 @@
                     }
                 }
             }
-
             form {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
             }
-
             .date-container {
                 padding: 20px 0 0 0;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 width: 85%;
-
                 .date-label {
                     width: 100%;
                     display: flex;
@@ -233,25 +249,20 @@
                     font-weight: 600;
                     color: #484848 !important;
                 }
-
                 .calendar-input {
                     width: 100%;
                     display: flex;
                     justify-content: center;
                     padding: 6px 0 0 0;
-
                     input[type="date"]::-webkit-clear-button {
                         display: none;
                     }
-
                     input[type="date"]::-webkit-inner-spin-button {
                         display: none;
                     }
-
                     input[type="date"]::-webkit-calendar-picker-indicator {
                         color: #2c3e50;
                     }
-
                     input[type="date"] {
                         width: 46%;
                         height: 34px;
@@ -267,7 +278,6 @@
                         display: inline-block !important;
                         visibility: visible !important;
                     }
-
                     input[type="date"],
                     focus {
                         color: #757575 !important;
@@ -277,7 +287,6 @@
                     }
                 }
             }
-
             .guest-container {
                 padding: 20px 0 0 0;
                 display: flex;
@@ -300,7 +309,6 @@
                     align-items: center;
                     padding: 0px 0 0 0;
                     border: 1px solid #EBEBEB;
-
                     select {
                         width: 100%;
                         -webkit-appearance: menulist-button;
@@ -314,10 +322,8 @@
                         display: inline-block !important;
                         visibility: visible !important;
                     }
-
                     select,
                     focus {
-                        
                         color: #757575 !important;
                         box-shadow: none;
                         -webkit-box-shadow: none;
@@ -325,14 +331,12 @@
                     }
                 }
             }
-
             .button-container {
                 padding: 25px 0 0 0;
                 width: 85%;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-
                 button {
                     cursor: pointer !important;
                     display: inline-block !important;
@@ -340,15 +344,9 @@
                     position: relative !important;
                     text-align: center !important;
                     text-decoration: none !important;
-                    -webkit-transition-property: background,
-                    border-color,
-                    color !important;
-                    -moz-transition-property: background,
-                    border-color,
-                    color !important;
-                    transition-property: background,
-                    border-color,
-                    color !important;
+                    -webkit-transition-property: background, border-color, color !important;
+                    -moz-transition-property: background, border-color, color !important;
+                    transition-property: background, border-color, color !important;
                     -webkit-transition-duration: 0.2s !important;
                     transition-duration: 0.2s !important;
                     -webkit-transition-timing-function: ease-out !important;
@@ -358,12 +356,7 @@
                     font-size: 16px !important;
                     line-height: 22px !important;
                     letter-spacing: normal !important;
-                    font-family: Circular,
-                    -apple-system,
-                    BlinkMacSystemFont,
-                    Roboto,
-                    Helvetica Neue,
-                    sans-serif !important;
+                    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
                     text-transform: undefined !important;
                     padding-top: 12px !important;
                     padding-bottom: 12px !important;
@@ -377,6 +370,10 @@
                     background: #FF5A5F !important;
                     border-color: transparent !important;
                     color: #ffffff !important;
+
+                    &:hover {
+                        background: rgb(238, 56, 62) !important;
+                    }
                 }
             }
             .additional-info {
@@ -385,7 +382,6 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                
                 .notice {
                     text-align: center;
                     width: 100%;
@@ -394,7 +390,6 @@
                     font-weight: 500;
                     border-bottom: 1px solid #EBEBEB;
                 }
-
                 .disclaimer-1 {
                     text-align: center;
                     width: 100%;
@@ -402,7 +397,6 @@
                     font-size: 14px;
                     font-weight: 500;
                 }
-
                 .disclaimer-2 {
                     text-align: center;
                     width: 100%;
