@@ -5,7 +5,7 @@ import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import ReviewContainer from '../home/review_container';
 
-function Modal({ modal }) {
+function Modal({ modal, closeModal }) {
     if (!modal) {
         return null;
     }
@@ -41,7 +41,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        closeModal: () => dispatch(closeModal())
+        closeModal: () => dispatch(closeModal)
     };
 };
 

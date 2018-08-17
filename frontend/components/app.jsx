@@ -32,16 +32,18 @@ const Show = (ownProps) => (
 );
 
 const App = ({ children }) => (
-    <div className="home-page">
+    <div>
         <Modal />
-        <div>
-            <Switch>
-                <AuthRoute exact path="/login" component={LoginFormContainer} />
-                <AuthRoute exact path="/signup" component={SignupFormContainer} />
-                <Route exact path="/search" component={Search} />
-                <Route exact path="/homes/:homeId" component={Show}/>
-                <Route path="/" component={Home} />
-            </Switch>
+        <div className="home-page">
+            <div>
+                <Switch>
+                    <AuthRoute exact path="/login" component={LoginFormContainer} />
+                    <AuthRoute exact path="/signup" component={SignupFormContainer} />
+                    <Route exact path="/search" component={Search} />
+                    <Route exact path="/homes/:homeId" component={Show}/>
+                    <Route path="/" component={Home} />
+                </Switch>
+            </div>
         </div>
     </div>
 );
