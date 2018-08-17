@@ -123,9 +123,6 @@ import ReviewListContainer from './review_list_container';
                             </div>
                         </div>
                         <div className="reviews-container">
-                            <div className="review-count-container">
-
-                            </div>
                             <div className="review-button-container">
                                 <button onClick={() => this.props.openModal(['review', this.props.homeId])}>Leave a Review</button>
                             </div>

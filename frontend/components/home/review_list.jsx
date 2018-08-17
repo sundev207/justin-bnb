@@ -8,15 +8,28 @@ class ReviewList extends React.Component {
 
     render() {
         if (!this.props.reviews) return null;
-        let { reviews } = this.props;
+        let { reviews, users } = this.props;
 
         return (
-            <div>
-                <ul>
+            <div className="review-top-container">
+                <div className="review-summary">
+                    <div className="review-count-container">
+                        <span>{reviews.length} Reviews</span>
+                    </div>
+                    <div className="avg-stars">
+                        <i className="fas fa-star fa-xs"></i>
+                        <i className="fas fa-star fa-xs"></i>
+                        <i className="fas fa-star fa-xs"></i>
+                        <i className="fas fa-star fa-xs"></i>
+                        <i className="fas fa-star fa-xs"></i>
+                    </div>
+                </div>
+                <ul className="review-list">
                     {reviews.map(review => (
                         <ReviewListItem 
                             key={review.id}
                             review={ review }
+                            user={ users[review.user_id] }
                             //some delete and edit buttons later
                         />
                     ))}

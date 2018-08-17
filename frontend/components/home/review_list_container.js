@@ -1,8 +1,9 @@
 import { connect } from 'react-redux';
 import ReviewList from './review_list';
 
-const mapStateToProps = ({entities: { reviews }}) => ({
-    reviews: Object.values(reviews)
+const mapStateToProps = ({entities: { reviews, users }}) => ({
+    reviews: Object.values(reviews),
+    users
 });
 
 const mapDispatchToProps = dispatch => ({
