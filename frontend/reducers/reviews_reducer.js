@@ -4,6 +4,8 @@ import { RECEIVE_HOME, RECEIVE_REVIEW, UPDATE_REVIEW, REMOVE_REVIEW } from '../a
 
 const reviewsReducer = (state = {}, action) => {
     Object.freeze(state);
+    let newState = merge({}, state);
+    
     switch (action.type) {
         case RECEIVE_HOME:
             return merge({}, state, action.reviews);

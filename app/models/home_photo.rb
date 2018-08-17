@@ -1,0 +1,2 @@
+class HomePhoto < ApplicationRecord
+end

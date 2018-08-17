@@ -1,4 +1,9 @@
 class Api::ReservationsController < ApplicationController
+    before_action :require_login, only: [:create, :update, :destroy]
+
+    def index
+        @reservation = Reservation.all
+    end
 
     def create
         @reservation = Reservation.new(reservation_params)
@@ -11,13 +16,14 @@ class Api::ReservationsController < ApplicationController
         end
     end
 
+    def update
+
+    end
+
     def destroy
 
     end
 
-    def update
-
-    end
 
     private
     def review_params

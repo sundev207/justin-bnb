@@ -5,7 +5,7 @@ export const ReviewListItem = ({ review, user }) => {
     return(
         <div className="single-review-container">
             <div className="author-container">
-                <span>{user.email}</span>
+                <span>{user.first_name}</span>
             </div>
             <div className="star-rating">
                 <i className="fas fa-star fa-xs"></i>

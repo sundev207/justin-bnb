@@ -13,7 +13,8 @@ export const receiveHome = payload => ({
     type: RECEIVE_HOME,
     home: payload.home,
     reviews: payload.reviews,
-    users: payload.users
+    users: payload.users,
+    reservations: payload.reservations
 
 });
 

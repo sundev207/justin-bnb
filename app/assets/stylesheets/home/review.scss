@@ -37,9 +37,21 @@
         width: 100%;
 
         .single-review-container {
+            display: flex;
+            flex-wrap: wrap;
             padding: 15px 0 15px 0;
+            width: 100%;
+            border-bottom: 1px solid #EBEBEB;
+
+
+            .author-container {
+                width: 10%;
+                font-size: 20px;
+                font-weight: 300;
+            }
 
             .star-rating {
+                width: 90%;
                  color: #008489 !important;
                  display: flex;
                  justify-content: flex-start;
@@ -51,7 +63,9 @@
             }
 
             .review-body {
-                line-height: 21px;
+                padding: 5px 0 0 0;
+                line-height: 24px;
+                color: #727272 !important;
             }
         }
     }
