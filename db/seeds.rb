@@ -6,22 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# h1.photo.purge
-# h2.photo.purge
-# h3.photo.purge
-# h4.photo.purge
-# h5.photo.purge
-# h6.photo.purge
-# h7.photo.purge
-# h8.photo.purge
-# h9.photo.purge
-# h10.photo.purge
-# h11.photo.purge
-# h12.photo.purge
-# h13.photo.purge
-# h14.photo.purge
-# h15.photo.purge
-
 User.destroy_all
 Home.destroy_all
 Review.destroy_all
@@ -386,50 +370,155 @@ r15 = Review.create(
     body: "We loved our stay in this cabana! The space is bright & beautiful, and the garden is the peaceful resort-like setting that was promised! We look forward to staying here again."
 )
 
+r16 = Review.create(
+    home_id: h2.id,
+    user_id: u3.id,
+    rating: 5,
+    body: "Wonderful stay at this location. I wish every Airbnb was like this one. Very clean, short car ride to the city area and had everything you may need. Host was very nice and I would love to stay here again."
+)
+
+r17 = Review.create(
+    home_id: h3.id,
+    user_id: u4.id,
+    rating: 5,
+    body: "Awesome!! We loved our stay here. Would definitely book again. Although parking can be a bit difficult, the local park offered perfect parking for us just 5 blocks away! We used public transit the whole trip, which was always on time and super helpful!"
+)
+
+r18 = Review.create(
+    home_id: h4.id,
+    user_id: u5.id,
+    rating: 5,
+    body: "Cute apartment with stylish touches, generously stocked pantry, nice neighborhood with close proximity to grocery, restaurants and BART."
+)
+
+r19 = Review.create(
+    home_id: h5.id,
+    user_id: u6.id,
+    rating: 5,
+    body: "A light-filled cocoon in a mixed, friendly residential neighborhood. Great deck. Close to Bart and transit connections. Small bed if you're a tall couple (I was fine on my own). Quiet, well equipped and good value."
+)
+
+r20 = Review.create(
+    home_id: h6.id,
+    user_id: u7.id,
+    rating: 5,
+    body: "Private, clean, quiet, comfortable, spacious, fantastic location right near public transit - it was our first airbnb experience and it was everything we were looking for."
+)
+
+r21 = Review.create(
+    home_id: h7.id,
+    user_id: u8.id,
+    rating: 5,
+    body: "It was my first time in San Francisco! The location was perfect, and although I read parking could be hard to find my group and I were lucky enough to find parking just around the corner!"
+)
+
+r22 = Review.create(
+    home_id: h8.id,
+    user_id: u9.id,
+    rating: 5,
+    body: "The place was a great value! The checkin was a breeze and I felt safe with the flood lights coming on when returning to her place at night. Host was pleasant and very easy to communicate with. Location is about 20-25 minutes from San Fran touristy sites."
+)
+
+r23 = Review.create(
+    home_id: h9.id,
+    user_id: u10.id,
+    rating: 5,
+    body: "This place is much prettier then the pictures and they are great to begin with. The deck is amazing and the couple is super great, accommodating and helpful with local tips. I would definitely stay here again and recommend others to as well."
+)
+
+r24 = Review.create(
+    home_id: h10.id,
+    user_id: u1.id,
+    rating: 5,
+    body: "The studio is located in a central area of SF that is within 15 minute walk to the famous Castro district. The property itself is also located in a secluded and peaceful neighborhood. The surrounding hills also make for some great hiking experiences that offer great views"
+)
+
+r25 = Review.create(
+    home_id: h11.id,
+    user_id: u2.id,
+    rating: 5,
+    body: "Such a great spot with a stellar location! The room is spacious and so is the private bath. It was also incredibly helpful to have the option to use the washer and dryer to clean our clothes after the first leg of our trip. "
+)
+
+r26 = Review.create(
+    home_id: h12.id,
+    user_id: u3.id,
+    rating: 5,
+    body: "Elmer's apartment is in a great location between many fun and exciting neighborhoods with everything in walking distance. He kept so many amenities for guests in the bathroom and kitchen, as well as local tips and maps for visiting San Francisco. "
+)
+
+r27 = Review.create(
+    home_id: h13.id,
+    user_id: u4.id,
+    rating: 5,
+    body: "Great place and location in SF. Great amenities and very nice styled apartment. Host is very gracious and prompt reply to communications. Wish I could have stayed longer."
+)
+
+r28 = Review.create(
+    home_id: h14.id,
+    user_id: u5.id,
+    rating: 5,
+    body: "Really nice stay! Host made the set up feel like we were at home and was very communicative. Out of all of our stays, we have to stay this was the most pleasant! He had a very cute dog too who is so cute!"
+)
+
+r29 = Review.create(
+    home_id: h15.id,
+    user_id: u6.id,
+    rating: 5,
+    body: "This was the best Air BnB I’ve ever stayed in! Kepa’s beautiful cabana and garden was the perfect place for us to stay on our mother/daughter trip. The neighborhood was incredibly safe and always warmer and sunnier than the rest of the city."
+)
+
+r30 = Review.create(
+    home_id: h1.id,
+    user_id: u7.id,
+    rating: 5,
+    body: "We loved our stay in this cabana! The space is bright & beautiful, and the garden is the peaceful resort-like setting that was promised! We look forward to staying here again."
+)
+
 #Home Photo Seed
-f1 = File.open("/Users/bjjeong/Downloads/d2a84479_original.jpg")
+f1 = File.open("app/assets/images/apartment-architecture-armchair-271805.jpg")
 h1.photo.attach(io: f1, filename: "d2a84479_original.jpg")
 
-f2 = File.open("/Users/bjjeong/Downloads/apartment.jpg")
+f2 = File.open("app/assets/images/apartment-architecture-art-276724.jpg")
 h2.photo.attach(io: f2, filename: "apartment.jpg")
 
-f3 = File.open("/Users/bjjeong/Downloads/apartment-architecture-armchair-271805.jpg")
+f3 = File.open("app/assets/images/apartment-architecture-carpet-584399.jpg")
 h3.photo.attach(io: f3, filename: "architecture-armchair-271805.jpg")
 
-f4 = File.open("/Users/bjjeong/Downloads/apartment-architecture-art-276724.jpg")
+f4 = File.open("app/assets/images/apartment-art-chair-1027512.jpg")
 h4.photo.attach(io: f4, filename: "apartment-architecture-art-276724.jpg")
 
-f5 = File.open("/Users/bjjeong/Downloads/apartment-architecture-carpet-584399.jpg")
+f5 = File.open("app/assets/images/apartment-beach-bed-271643.jpg")
 h5.photo.attach(io: f5, filename: "apartment-architecture-carpet-584399.jpg")
 
-f6 = File.open("/Users/bjjeong/Downloads/apartment-art-chair-1027512.jpg")
+f6 = File.open("app/assets/images/apartment-bed-bedroom-271624.jpg")
 h6.photo.attach(io: f6, filename: "apartment-art-chair-1027512.jpg")
 
-f7 = File.open("/Users/bjjeong/Downloads/apartment-beach-bed-271643.jpg")
+f7 = File.open("app/assets/images/apartment-bedroom-ceiling-1082355.jpg")
 h7.photo.attach(io: f7, filename: "apartment-beach-bed-271643.jpg")
 
-f8 = File.open("/Users/bjjeong/Downloads/apartment-bed-bedroom-271624.jpg")
+f8 = File.open("app/assets/images/apartment-comfort-contemporary-1234462.jpg")
 h8.photo.attach(io: f8, filename: "apartment-bed-bedroom-271624.jpg")
 
-f9 = File.open("/Users/bjjeong/Downloads/apartment-bedroom-ceiling-1082355.jpg")
+f9 = File.open("app/assets/images/apartment-condo-condominium-275484.jpg")
 h9.photo.attach(io: f9, filename: "apartment-bedroom-ceiling-1082355.jpg")
 
-f10 = File.open("/Users/bjjeong/Downloads/apartment-comfort-contemporary-1234462.jpg")
+f10 = File.open("app/assets/images/apartment.jpg")
 h10.photo.attach(io: f10, filename: "apartment-comfort-contemporary-1234462.jpg")
 
-f11 = File.open("/Users/bjjeong/Downloads/apartment-condo-condominium-275484.jpg")
+f11 = File.open("app/assets/images/architecture-cabinets-carpet-245208.jpg")
 h11.photo.attach(io: f11, filename: "apartment-condo-condominium-275484.jpg")
 
-f12 = File.open("/Users/bjjeong/Downloads/architecture-cabinets-carpet-245208.jpg")
+f12 = File.open("app/assets/images/bags-books-design-683929.jpg")
 h12.photo.attach(io: f12, filename: "architecture-cabinets-carpet-245208.jpg")
 
-f13 = File.open("/Users/bjjeong/Downloads/bags-books-design-683929.jpg")
+f13 = File.open("app/assets/images/bed-bedroom-clean-775219.jpg")
 h13.photo.attach(io: f13, filename: "bags-books-design-683929.jpg")
 
-f14 = File.open("/Users/bjjeong/Downloads/bed-bedroom-clean-775219.jpg")
+f14 = File.open("app/assets/images/bed-bedroom-contemporary-1267438.jpg")
 h14.photo.attach(io: f14, filename: "bed-bedroom-clean-775219.jpg")
 
-f15 = File.open("/Users/bjjeong/Downloads/bed-bedroom-contemporary-1267438.jpg")
+f15 = File.open("app/assets/images/d2a84479_original.jpg")
 h15.photo.attach(io: f15, filename: "bed-bedroom-contemporary-1267438.jpg")
 
 #User Photo Seed

@@ -45,13 +45,14 @@
 
 
             .author-container {
-                width: 10%;
+                padding: 0 8px 0 0;
+                width: auto;
                 font-size: 20px;
                 font-weight: 300;
             }
 
             .star-rating {
-                width: 90%;
+                // width: 90%;
                  color: #008489 !important;
                  display: flex;
                  justify-content: flex-start;
