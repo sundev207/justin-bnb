@@ -1,8 +1,7 @@
 class Api::ReservationsController < ApplicationController
-    before_action :require_login, only: [:create, :update, :destroy]
 
     def index
-        @reservation = Reservation.all
+        @reservation = Reservation.where(guest_id: current_user.id)
     end
 
     def create
@@ -26,7 +25,7 @@ class Api::ReservationsController < ApplicationController
 
 
     private
-    def review_params
-        params.require(:reservation).permit(:num_guests, :check_in_date, :check_out_date, :home_id)
+    def reservation_params
+        params.require(:reservation).permit(:num_guests, :check_in_date, :check_out_date, :home_id, :guest_id)
     end
 end

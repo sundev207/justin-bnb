@@ -8,7 +8,13 @@ export const receiveReservation = payload => ({
 });
 
 export const createReservation = reservation => dispatch => (
-    ReservationApiUtil.createBooking(reservation).then(newReservation => (
-        dispatch(receiveReservation(newReservation))
+    ReservationApiUtil.createReservation(reservation).then(payload => (
+        dispatch(receiveReservation(payload))
     ))
 );
+
+// export const fetchReservation = id => dispatch => (
+//     ReservationApiUtil.fetchReservation(id).then(payload => 
+//         dispatch(receiveReservation(payload))
+//     )
+// );

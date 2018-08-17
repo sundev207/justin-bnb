@@ -30,7 +30,7 @@ class Review extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const review = this.state;
+        let review = this.state;
         review.user_id = this.props.currentUser;
         this.props.createReview(review).then(this.props.closeModal);
     }

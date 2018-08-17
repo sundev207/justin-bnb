@@ -26,7 +26,6 @@ class Map extends React.Component {
             center: center ? center : this.props.center,
             zoom: 13
         };
-
         this.map = new google.maps.Map(map, options);
         this.MarkerManager = new MarkerManager(this.map);
         this.MarkerManager.updateMarkers(this.props.homes);
@@ -51,7 +50,7 @@ class Map extends React.Component {
             map: this.map
         });
 
-        const infowindow = new google.maps.InfoWindow();
+        const infowindow = new google.maps.InfoWindow({disableAutoPan: true});
 
         this.bounds.extend(pos);
 
@@ -79,15 +78,15 @@ class Map extends React.Component {
                 this.props.updateFilter("bounds", bounds);
             }
 
-            console.log('center',
-                bounds.getCenter().lat(),
-                bounds.getCenter().lng());
-            console.log("north east",
-                bounds.getNorthEast().lat(),
-                bounds.getNorthEast().lng());
-            console.log("south west",
-                bounds.getSouthWest().lat(),
-                bounds.getSouthWest().lng());
+            // console.log('center',
+            //     bounds.getCenter().lat(),
+            //     bounds.getCenter().lng());
+            // console.log("north east",
+            //     bounds.getNorthEast().lat(),
+            //     bounds.getNorthEast().lng());
+            // console.log("south west",
+            //     bounds.getSouthWest().lat(),
+            //     bounds.getSouthWest().lng());
         });
     }
 

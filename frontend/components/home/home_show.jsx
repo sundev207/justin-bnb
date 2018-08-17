@@ -6,10 +6,32 @@ import ReviewListContainer from './review_list_container';
  class HomeShow extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            num_guests: 1,
+            check_in_date: "",
+            check_out_date: ""
+        };
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchHome(this.props.homeId);
+        // this.props.fetchReservation(this.props.homeId);
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        const reservation = this.state;
+        reservation.guest_id = this.props.currentUser;
+        reservation.home_id = this.props.homeId;
+
+        this.props.createReservation(reservation);
+    }
+
+    update(field) {
+        return (e) => this.setState({
+            [field]: e.currentTarget.value
+        });
     }
 
     render() {
@@ -161,7 +183,7 @@ import ReviewListContainer from './review_list_container';
                                     </div>
                                 </div>
                             </div>
-                            <form>
+                            <form onSubmit={this.handleSubmit}>
                                 <div className="date-container">
                                     <div className="date-label">
                                         <div>
@@ -169,8 +191,8 @@ import ReviewListContainer from './review_list_container';
                                         </div>
                                     </div>
                                     <div className="calendar-input">
-                                        <input type="date" />
-                                        <input type="date" />
+                                        <input type="date" onChange={this.update("check_in_date")}/>
+                                        <input type="date" onChange={this.update("check_out_date")}/>
                                     </div>
                                 </div>
                                 <div className="guest-container">
@@ -180,19 +202,19 @@ import ReviewListContainer from './review_list_container';
                                         </div>
                                     </div>
                                     <div className="guest-input">
-                                        <select>
-                                            <option>1 Guest</option>
-                                            <option>2 Guests</option>
-                                            <option>3 Guests</option>
-                                            <option>4 Guests</option>
-                                            <option>5 Guests</option>
-                                            <option>6 Guests</option>
-                                            <option>7 Guests</option>
-                                            <option>8 Guests</option>
-                                            <option>9 Guests</option>
-                                            <option>10 Guests</option>
-                                            <option>11 Guests</option>
-                                            <option>12 Guests</option>
+                                        <select onChange={this.update("num_guests")}>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
                                         </select>
                                     </div>
                                 </div>

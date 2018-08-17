@@ -5,7 +5,7 @@ class Homepage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            search_content: ""
+            search_content: "",
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
