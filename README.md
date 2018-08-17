@@ -67,7 +67,7 @@ Users can search for a location, and an autocomplete dropdown will appear under 
 Users view a specific home show page where they can view a larger photo, leave a review, and make a reservation for that home.
 
 ##### Navigating Show Page
-![homeshow](https://media.giphy.com/media/FdpoxeXsf4npxC0pDq/giphy.gif)
+![show](https://media.giphy.com/media/FdpoxeXsf4npxC0pDq/giphy.gif)
 
 ##### Leaving a review
 ![review](https://media.giphy.com/media/PO8razNrfQexdSznOA/giphy.gif)
