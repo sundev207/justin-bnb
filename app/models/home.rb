@@ -28,9 +28,9 @@ class Home < ApplicationRecord
         foreign_key: :host_id,
         class_name: :User
 
-    # has_many :reservations,
-    #     foreign_key: :home_id,
-    #     class_name: :Reservation
+    has_many :reservations,
+        foreign_key: :home_id,
+        class_name: :Reservation
 
     # has_many :amenities,
     #     foreign_key: :home_id,

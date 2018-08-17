@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy, :show]
     resources :homes, only: [:index, :show, :create]
     resources :reviews, except: [:new, :show, :edit]
+    resources :reservations, except: [:new, :show, :edit]
   end
   
   root "static_pages#root"
