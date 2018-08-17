@@ -1,7 +1,15 @@
 json.home do
   json.partial! '/api/homes/home', home: @home
   json.reviewIds @home.reviews.pluck(:id)
+  json.photoUrl @home.photo.attached? ? url_for(@home.photo) : nil
 end
+
+# json.photo do
+#   json.set! @home.photo.id do
+#     json.id @home.photo.id
+#     json.url url_for(@home.photo)
+#   end
+# end
 
 @home.reviews.each do |review|
   json.reviews do

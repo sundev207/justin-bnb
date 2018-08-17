@@ -24,6 +24,7 @@ class Home < ApplicationRecord
     validates :name, :city, :max_guests, :num_rooms, :num_baths, :num_beds, :description,
         :cancellation_policy, :latitude, :longitude, :price, presence: true
 
+    has_one_attached :photo
     belongs_to :host,
         foreign_key: :host_id,
         class_name: :User
@@ -31,10 +32,6 @@ class Home < ApplicationRecord
     has_many :reservations,
         foreign_key: :home_id,
         class_name: :Reservation
-
-    # has_many :amenities,
-    #     foreign_key: :home_id,
-    #     class_name: :Amenity
 
     has_many :reviews,
         foreign_key: :home_id,

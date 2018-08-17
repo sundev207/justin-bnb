@@ -10,7 +10,8 @@ class HomeIndexItem extends React.Component {
 
         return (
             <div className="home-index-item" onClick={() => this.props.history.push(`/homes/${home.id}`)}>
-                <div className="home-index-photo">
+                <div className="home-index-photo-container">
+                    <img className="home-index-photo" src={home.photoUrl} />
                 </div>
                 <div className="home-index-details">
                     <div className="home-index-rooms">

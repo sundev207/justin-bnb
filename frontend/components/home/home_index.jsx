@@ -3,6 +3,10 @@ import HomeIndexItem from './home_index_item';
 import { withRouter } from 'react-router';
 
 class HomeIndex extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    
     render() {
         let { homes } = this.props;
         return (

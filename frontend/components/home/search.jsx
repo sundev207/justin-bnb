@@ -9,6 +9,7 @@ class Search extends React.Component {
 
     componentDidMount() {
         this.props.fetchHomes();
+        window.scrollTo(0, 0);
     }
 
     render() {

@@ -95,7 +95,7 @@ class Map extends React.Component {
         if (!this.props.homes.length > 1) return null;
 
         return (
-            <div>
+            <div className="map-top-container">
                 <div ref="map" id='map-container' ref="map"/>
             </div>
         );

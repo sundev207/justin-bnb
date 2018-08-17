@@ -14,7 +14,8 @@ export const receiveHome = payload => ({
     home: payload.home,
     reviews: payload.reviews,
     users: payload.users,
-    reservations: payload.reservations
+    reservations: payload.reservations,
+    photo: payload.photo
 
 });
 

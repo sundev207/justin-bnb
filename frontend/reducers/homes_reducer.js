@@ -9,9 +9,7 @@ const homesReducer = (state = {}, action) => {
         case RECEIVE_HOMES:
             return action.homes;
         case RECEIVE_HOME:
-            const newHome = {
-                [action.home.id]: action.home
-            };
+            const newHome = {[action.home.id]: action.home};
             return merge(newState, newHome);
         case RECEIVE_REVIEW:
             newState[action.review.home_id].reviewIds.push(action.review.id);

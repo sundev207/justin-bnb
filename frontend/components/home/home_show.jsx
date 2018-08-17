@@ -19,7 +19,8 @@ import ReviewListContainer from './review_list_container';
 
         return (
             <div>
-                <div className="big-photo">
+                <div className="home-show-photo-container">
+                    <img className="home-show-photo" src={home.photoUrl}/>
                 </div>
                 <div className="home-show-content">
                     <div className="home-show-left">
