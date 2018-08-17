@@ -33,7 +33,7 @@
     }
 
     .review-list{
-        padding: 25px 0 0 0;
+        padding: 20px 0 0 0;
         width: 100%;
 
         .single-review-container {
@@ -48,6 +48,10 @@
                      padding: 0 5px 0 0;
                      font-size: 12px;
                  }
+            }
+
+            .review-body {
+                line-height: 21px;
             }
         }
     }
