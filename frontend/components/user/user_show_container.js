@@ -1,13 +1,16 @@
 import { connect } from 'react-redux';
 import { fetchReservations } from '../../actions/reservation_actions';
+import { fetchHomes } from '../../actions/home_actions';
 import UserShow from './user_show';
 
 const mapStateToProps = (state) => ({
-  reservations: Object.values(state.entities.reservations)
+  reservations: Object.values(state.entities.reservations),
+  homes: Object.values(state.entities.homes)
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchReservations: () => dispatch(fetchReservations())
+  fetchReservations: () => dispatch(fetchReservations()),
+  fetchHomes: () => dispatch(fetchHomes())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserShow);
