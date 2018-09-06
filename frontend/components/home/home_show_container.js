@@ -4,11 +4,16 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 import { createReservation } from '../../actions/reservation_actions';
 import HomeShow from './home_show';
 
-const mapStateToProps = (state, ownProps) => ({
-    currentUser: state.session.id,
-    homeId: parseInt(ownProps["ownProps"].match.params.homeId),
-    home: state.entities.homes[parseInt(ownProps["ownProps"].match.params.homeId)]
-});
+const mapStateToProps = (state, ownProps) => {
+
+  return ({
+      currentUser: state.session.id,
+      homeId: parseInt(ownProps["ownProps"].match.params.homeId),
+      home: state.entities.homes[parseInt(ownProps["ownProps"].match.params.homeId)],
+      reservations: Object.values(state.entities.reservations)
+  });
+};
+
 
 const mapDispatchToProps = dispatch => ({
     createReservation: reservation => dispatch(createReservation(reservation)),

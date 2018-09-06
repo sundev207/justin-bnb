@@ -1,7 +1,7 @@
 import merge from "lodash/merge";
 
 import { RECEIVE_RESERVATION } from "../actions/reservation_actions";
-import { RECEIVE_HOME } from "../actions/spot_actions";
+import { RECEIVE_HOME } from "../actions/home_actions";
 
 const reservationsReducer = (state = {}, action) => {
     Object.freeze(state);

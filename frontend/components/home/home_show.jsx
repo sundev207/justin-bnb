@@ -9,19 +9,23 @@ import ReviewListContainer from './review_list_container';
         this.state = {
             num_guests: 1,
             check_in_date: "",
-            check_out_date: ""
+            check_out_date: "",
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchHome(this.props.homeId);
-        // this.props.fetchReservation(this.props.homeId);
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        const reservation = this.state;
+        const reservation = {
+          num_guests: this.state.num_guests,
+          check_in_date: this.state.check_in_date,
+          check_out_date: this.state.check_out_date
+        };
+        
         reservation.guest_id = this.props.currentUser;
         reservation.home_id = this.props.homeId;
 
