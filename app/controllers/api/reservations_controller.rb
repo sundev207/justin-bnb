@@ -1,7 +1,7 @@
 class Api::ReservationsController < ApplicationController
 
     def index
-        @reservation = Reservation.where(guest_id: current_user.id)
+        @reservations = Reservation.where(guest_id: current_user.id)
     end
 
     def create
