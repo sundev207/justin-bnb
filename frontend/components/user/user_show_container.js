@@ -10,7 +10,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchReservations: () => dispatch(fetchReservations()),
-  fetchHomes: () => dispatch(fetchHomes())
+  fetchHomes: () => dispatch(fetchHomes()),
+  fetchUser: id => dispatch(fetchUser(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserShow);
