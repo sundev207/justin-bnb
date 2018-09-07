@@ -4,27 +4,28 @@ class User extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      reservations: this.props.reservations
     };
   }
 
   componentDidMount() {
     this.props.fetchHomes();
-    this.props.fetchReservations();
+    this.props.fetchUser(this.props.user.id);
   }
 
   render() {
-    if (!this.props.reservations) return null;
-    let { reservations } = this.props;
+    if (!this.props.user.reservations) return null;
+    let { user, homes } = this.props;
+
+    let reservedHomes = [];
+    user.reservations.forEach(reservation => {
+      reservedHomes.push(homes.find(home => home.id === reservation.home_id))
+    });
+
 
     return(
       <div>
         <ul>
-          {reservations.map(reservation => (
-            <li key={reservation.id}>
-              {reservation.home_id}
-            </li>
-          ))}
+          {reservedHomes.forEach(home => <li> { console.log("what the hell...") } </li>)}
         </ul>
       </div>
     );
