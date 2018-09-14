@@ -1,4 +1,5 @@
 import React from 'react';
+import UserListItem from './user_list_item';
 
 class User extends React.Component {
   constructor(props) {
@@ -12,10 +13,14 @@ class User extends React.Component {
 
   componentDidMount() {
     this.props.fetchHomes()
-      .then(this.setState({ homes: this.props.homes}));
+      .then(homes => {
+        this.setState({homes: homes.homes});
+      });
 
     this.props.fetchUser(this.props.user.id)
-      .then(this.setState({user: this.props.user}));
+      .then(user => {
+        this.setState({user: user.user });
+      });
   }
 
   render() {
@@ -23,19 +28,23 @@ class User extends React.Component {
       return null;
     }
 
-    console.log(this.state.user, this.state.homes);
-    let { user, homes } = this.props;
+    let { user, homes } = this.state;
 
-    // let userHomes = [];
-    // user.reservations.forEach(reservation => {
-    //   userHomes.push(homes.find(home => home.id === reservation.home_id));
-    // });
+    let userHomes = [];
+    user.reservations.forEach(reservation => {
+      userHomes.push({home: homes[reservation.home_id], reservation: reservation});
+    });
 
     return(
       <div>
         <ul>
-          {this.state.reservedHomes.forEach(home => <li> {home.name} </li>)}
-          <li>What the hell</li>
+          {userHomes.map((payload, index) => (
+            <UserListItem
+              key={index}
+              home={payload.home}
+              reservation={payload.reservation}
+            />
+          ))}
         </ul>
       </div>
     );
