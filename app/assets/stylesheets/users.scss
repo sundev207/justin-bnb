@@ -1,3 +1,30 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.reservation-index {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .reservation-title {
+    width: 96%;
+    font-size: 2.2em;
+    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #484848;
+  }
+
+  .list {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .reservation {
+    width: 30%;
+    height: 30vh;
+  }
+
+}

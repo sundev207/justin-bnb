@@ -36,8 +36,13 @@ class User extends React.Component {
     });
 
     return(
-      <div>
-        <ul>
+      <div className="reservation-index">
+        <ul className="list">
+          <li className="reservation-title">
+            <div>
+              <h1>My Reservations</h1>
+            </div>
+          </li>
           {userHomes.map((payload, index) => (
             <UserListItem
               key={index}
