@@ -74,13 +74,19 @@ class Nav extends React.Component {
                         <div className="nav-link-container">
                             <ul>
                                 <li>
-                                    <button>Become a host</button>
+                                  <a href="https://www.linkedin.com/in/bjjeong" target="_blank">
+                                    <button>LinkedIn</button>
+                                  </a>
                                 </li>
                                 <li>
-                                    <button>Earn credit</button>
+                                  <a href="https://www.github.com/bjjeong" target="_blank">
+                                    <button>GitHub</button>
+                                  </a>
                                 </li>
                                 <li>
-                                    <button>Help</button>
+                                  <a href="https://www.elbrian.com" target="_blank">
+                                    <button>Personal Blog</button>
+                                  </a>
                                 </li>
                                 <li onClick={() => openModal(['signup'])}>
                                     <button>Sign up</button>
