@@ -8,6 +8,16 @@
     background-position: center;
     filter: grayscale(20%);
 
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: '';
+      background: transparent;
+      border: none;
+      color: white;
+    }
+
     .navbar {
         display: flex;
         justify-content: space-between;

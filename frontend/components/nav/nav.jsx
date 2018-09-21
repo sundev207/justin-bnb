@@ -8,6 +8,7 @@ class Nav extends React.Component {
             search_content: ""
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
     componentDidMount() {
@@ -24,6 +25,11 @@ class Nav extends React.Component {
         return (e) => {
             this.setState({ [field]: e.target.value });
         };
+    }
+
+    handleChange(value){
+      console.log(value);
+      // this.props.logout();
     }
 
     render() {
@@ -136,6 +142,15 @@ class Nav extends React.Component {
                                 </li>
                                 <li>
                                     <button>Help</button>
+                                </li>
+                                <li>
+                                  {<button>
+                                    <select onChange={() => console.log(this.value)} defaultValue="user-options">
+                                      <option value="user-options" disabled>User Options</option>
+                                      <option value="profile">Profile</option>
+                                      <option value="logout">Logout</option>
+                                    </select>
+                                  </button>}
                                 </li>
                                 <li onClick={() => logout()}>
                                     <button className="header-button">Log Out</button>
