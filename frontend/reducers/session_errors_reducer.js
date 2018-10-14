@@ -1,6 +1,5 @@
 import { RECEIVE_CURRENT_USER, RECEIVE_ERRORS } from '../actions/session_actions';
 
-
 const _nullErrors = [];
 
 export default (state = _nullErrors, action) => {

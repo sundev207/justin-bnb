@@ -155,15 +155,8 @@ class Nav extends React.Component {
                                     <button>Personal Blog</button>
                                   </a>
                                 </li>
-                                {/* <li>
-                                  {<button>
-                                    <select onChange={() => console.log(this.value)} defaultValue="user-options">
-                                      <option value="user-options" disabled>User Options</option>
-                                      <option value="profile">Profile</option>
-                                      <option value="logout">Logout</option>
-                                    </select>
-                                  </button>}
-                                </li> */}
+                                <li onClick={() => this.props.history.push(`/users/${currentUser}`)}>
+                                  <button className="header-button">Profile</button>                                </li>
                                 <li onClick={() => logout()}>
                                     <button className="header-button">Log Out</button>
                                 </li>
