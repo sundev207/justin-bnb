@@ -17,12 +17,7 @@ class Homepage extends React.Component {
     }
 
     handleSubmit(e) {
-        // e.preventDefault();
         this.props.history.push('/search');
-        // this.props.search(this.state)
-        //     .then(data => this.props.history.push(`/search/${data.id}`));
-        
-        // https://developers.google.com/maps/documentation/javascript/examples/places-searchbox
     }
 
     update(field) {
@@ -32,7 +27,7 @@ class Homepage extends React.Component {
     }
     render() {
         return (
-            <div className="-page">
+            <div className="home-page">
                 <div className="home-searchbar">
                     <div className="search-slogan">
                         <h1>Book unique homes and</h1>

@@ -10,7 +10,6 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
     fetchHomes: () => dispatch(fetchHomes()),
-    updateFilter: (filter, value) => dispatch(updateFilter(filter, value))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search);
