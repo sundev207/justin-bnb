@@ -8,7 +8,6 @@ class Nav extends React.Component {
             search_content: ""
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleChange = this.handleChange.bind(this);
     }
 
     componentDidMount() {
@@ -25,11 +24,6 @@ class Nav extends React.Component {
         return (e) => {
             this.setState({ [field]: e.target.value });
         };
-    }
-
-    handleChange(value){
-      console.log(value);
-      // this.props.logout();
     }
 
     render() {
@@ -55,12 +49,9 @@ class Nav extends React.Component {
                                             <div className="inner5">
                                                 <div className="inner6">
                                                     <div className="inner7">
-                                                        {/* <div className="magnify-glass">
-                                                            <i className="fas fa-search"></i>
-                                                        </div> */}
-                                                        <div className="input-container">
-                                                            <input type="text" placeholder="Anywhere" onChange={this.update("search_content")} id="autocomplete"/>
-                                                        </div>
+                                                      <div className="input-container">
+                                                          <input type="text" placeholder="Anywhere" onChange={this.update("search_content")} id="autocomplete"/>
+                                                      </div>
                                                     </div>
                                                 </div>
                                             </div>
