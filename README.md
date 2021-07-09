@@ -106,18 +106,3 @@ Just-bnb was built with the purpose of creating a full-stack, single-page applic
 ---------
 
 ###### Developed by Justin Padilla
-
-[![alt text][4.1]][4]
-[![alt text][3.1]][3]
-[![alt text][1.1]][1]
-[![alt text][2.1]][2]
-
-
-
-
-
-
-
-
-
-
